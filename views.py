@@ -16,7 +16,7 @@ project_2=st.Page("jd1/Parcel.py",
 #pg = st.navigation(pages=[about_page,project_1,project_2])
 pg = st.navigation({"Info":[about_page],
                     "Project":[project_1,project_2]})
-st.logo("Jd")
+#st.logo("Jd")
 st.sidebar.text("Happy journey from jd 💕")
 pg.run()
 st.balloons()
