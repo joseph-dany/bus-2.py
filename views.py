@@ -4,9 +4,9 @@ st.title("Parcel :package: ")
 with st.container():
     st.write("We are providing parcel facility which makes easier to send the parcels")
 colo1,colo2=st.columns(2,gap="small")
-with colo1:
+#with colo1:
     #st.image("./asets/jd.2.jpeg",width=230)
-with colo2:
+with colo1:
     st.title("Send the Parcel :incoming_envelope:")
     st.write("just click the button to send the parcel and fill the details complete the payment process to get notification about the parcel tracking")
     st.link_button("send parcel","https://forms.gle/pec69CtXypbGfe6K6")
