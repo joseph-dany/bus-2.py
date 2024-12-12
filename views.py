@@ -5,7 +5,7 @@ with st.container():
     st.write("We are providing parcel facility which makes easier to send the parcels")
 colo1,colo2=st.columns(2,gap="small")
 with colo1:
-    st.image("./asets/jd.2.jpeg",width=230)
+    #st.image("./asets/jd.2.jpeg",width=230)
 with colo2:
     st.title("Send the Parcel :incoming_envelope:")
     st.write("just click the button to send the parcel and fill the details complete the payment process to get notification about the parcel tracking")
@@ -31,7 +31,7 @@ def contact_form():
 st.title("Businfoo! :trolleybus:")
 col1,col2=st.columns(2,gap="small")
 with col1:
-    st.image("./asets/jd.1.jpeg",width=230)
+    #st.image("./asets/jd.1.jpeg",width=230)
 with col2:
     st.title("BOOK YOUR TICKETS NOW HURRY!!:runner:")
     st.link_button("Book now","https://forms.gle/mVnYjupNxDw9qB4r7")
