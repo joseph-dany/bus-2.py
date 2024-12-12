@@ -18,5 +18,5 @@ pg = st.navigation({"Info":[about_page],
                     "Project":[project_1,project_2]})
 #st.logo("asets/joseph.jd.jpeg")
 st.sidebar.text("Happy journey from jd 💕")
-pg.run()
+#pg.run()
 st.balloons()
