@@ -9,10 +9,10 @@ def show_contact_form():
     contact_form()
 
 st.title("Businfoo! :trolleybus:")
-col1,col2=st.columns(2,gap="small")
-with col1:
-    st.image("./asets/jd.1.jpeg",width=230)
-with col2:
+#col1,col2=st.columns(2,gap="small")
+#with col1:
+#    st.image("./asets/jd.1.jpeg",width=230)
+with st.container():
     st.title("BOOK YOUR TICKETS NOW HURRY!!:runner:")
     st.link_button("Book now","https://forms.gle/mVnYjupNxDw9qB4r7")
     #if st.button("Book now"):
