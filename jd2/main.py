@@ -1,15 +1,15 @@
 import streamlit as st
 st.set_page_config(page_title="Businfoo",page_icon="bus")
 st.sidebar.success("About")
-about_page=st.Page("views/Ticket.py",
+about_page=st.Page("jd1/Ticket.py",
                         title="Ticket",
                         icon=":material/local_activity:",
                    default=True,)
-project_1=st.Page("views/Timing.py",
+project_1=st.Page("jd1/Timing.py",
                         title="Schedule",
                         icon=":material/event_available:",)
 
-project_2=st.Page("views/Parcel.py",
+project_2=st.Page("jd1/Parcel.py",
                         title="Parcel",
                         icon=":material/package:",)
 
