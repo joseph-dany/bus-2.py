@@ -1,37 +1,43 @@
 import streamlit as st
-st.title("Parcel :package: ")
+st.set_page_config(page_title="Businfoo",page_icon="bus")
+st.sidebar.success("About")
+about_page=st.Page("views/Ticket.py",
+                        title="Ticket",
+                        icon=":material/local_activity:",
+                   default=True,)
+project_1=st.Page("views/Timing.py",
+                        title="Schedule",
+                        icon=":material/event_available:",)
 
-with st.container():
-    st.write("We are providing parcel facility which makes easier to send the parcels")
-#with colo1:
-    #st.image("./asets/jd.2.jpeg",width=230)
-with st.container():
-    st.title("Send the Parcel :incoming_envelope:")
-    st.write("just click the button to send the parcel and fill the details complete the payment process to get notification about the parcel tracking")
-    st.link_button("send parcel","https://forms.gle/pec69CtXypbGfe6K6")
-with st.container():
-    st.write("___")
-    st.subheader("Parcel Enquiry :mag:")
-    st.write("We are providing parcel delivery through bus transport which is easy way to send something important.Bus parcel delivery is a budget-friendly option for sending parcels within India. It leverages the extensive network of bus routes to reach various locations. While it might not offer the speed of express courier services, it provides a reliable and secure way to transport parcels. However, limited tracking options and potential for damage during transit are factors to consider. By choosing a reputable bus service and packing items securely, you can effectively utilize bus parcel delivery for your shipping needs.")
+project_2=st.Page("views/Parcel.py",
+                        title="Parcel",
+                        icon=":material/package:",)
+
+#pg = st.navigation(pages=[about_page,project_1,project_2])
+pg = st.navigation({"Info":[about_page],
+                    "Project":[project_1,project_2]})
+st.logo("asets/joseph.jd.jpeg")
+st.sidebar.text("Happy journey from jd 💕")
+pg.run()
+st.balloons()
 
 def contact_form():
-  with st.form("contact_form"):
-      name=st.text_input("First Name")
-      number=st.text_input("Contact number")
-      present=st.text_input("From")
-      where=st.text_input("To where")
-      msg=st.text_area("Your message")
-      submit_but=st.form_submit_button("submit")
+    with st.form("contact_form"):
+        name=st.text_input("First Name")
+        number=st.text_input("Contact number")
+        present=st.text_input("From")
+        where=st.text_input("To where")
+        msg=st.text_area("Your message")
+        submit_but=st.form_submit_button("submit")
 
-      if submit_but:
-          st.success("Message successfully sent!")
+        if submit_but:
+            st.success("Message successfully sent!")
 
-  
 st.title("Businfoo! :trolleybus:")
-#col1,col2=st.columns(2,gap="small")
-#with col1:
-    #st.image("./asets/jd.1.jpeg",width=230)
-with st.container():
+col1,col2=st.columns(2,gap="small")
+with col1:
+    st.image("./asets/jd.1.jpeg",width=230)
+with col2:
     st.title("BOOK YOUR TICKETS NOW HURRY!!:runner:")
     st.link_button("Book now","https://forms.gle/mVnYjupNxDw9qB4r7")
     #if st.button("Book now"):
@@ -66,7 +72,6 @@ if st.button("contact me"):
     show_contact_form()
 
 
-
 st.title("Timing :mantelpiece_clock:")
 
 st.subheader("Know the Timings of buses you want :dart:")
@@ -77,3 +82,20 @@ st.write("""
 * Kurnool to Vijayawada:point_right:[ktv.list>](https://docs.google.com/spreadsheets/d/1ictO8SNqlm27GCe8p0p7bS19fPHV-vCYNiVw6v6rcmM/edit?usp=sharing)""")
 st.write("---")
 st.write("May the timings can be delay but you can catch the bus with in or after 15-20 mins . We are assure you that be careful with online payment don't give or send money to unknown :thumbsup:")
+
+
+st.title("Parcel :package: ")
+
+with st.container():
+    st.write("We are providing parcel facility which makes easier to send the parcels")
+colo1,colo2=st.columns(2,gap="small")
+with colo1:
+    st.image("./asets/jd.2.jpeg",width=230)
+with colo2:
+    st.title("Send the Parcel :incoming_envelope:")
+    st.write("just click the button to send the parcel and fill the details complete the payment process to get notification about the parcel tracking")
+    st.link_button("send parcel","https://forms.gle/pec69CtXypbGfe6K6")
+with st.container():
+    st.write("___")
+    st.subheader("Parcel Enquiry :mag:")
+    st.write("We are providing parcel delivery through bus transport which is easy way to send something important.Bus parcel delivery is a budget-friendly option for sending parcels within India. It leverages the extensive network of bus routes to reach various locations. While it might not offer the speed of express courier services, it provides a reliable and secure way to transport parcels. However, limited tracking options and potential for damage during transit are factors to consider. By choosing a reputable bus service and packing items securely, you can effectively utilize bus parcel delivery for your shipping needs.")
