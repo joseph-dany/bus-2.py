@@ -1,7 +1,7 @@
 import streamlit as st
 
-from jd1 import contact
-#from jd1 import contact_form
+from views import contact
+from views.contact import contact_form
 
 
 @st.dialog("Contact me")
