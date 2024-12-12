@@ -1,4 +1,5 @@
 import streamlit as st
+from jd1 import Parce , Ticket , Timimg 
 st.set_page_config(page_title="Businfoo",page_icon="bus")
 st.sidebar.success("About")
 about_page=st.Page("jd1/Ticket.py",
