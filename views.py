@@ -1,15 +1,15 @@
 import streamlit as st
 st.set_page_config(page_title="Businfoo",page_icon="bus")
 st.sidebar.success("About")
-about_page=st.Page("views/Ticket.py",
+about_page=st.Page("jd1/Ticket.py",
                         title="Ticket",
                         icon=":material/local_activity:",
                    default=True,)
-project_1=st.Page("views/Timing.py",
+project_1=st.Page("jd1/Timing.py",
                         title="Schedule",
                         icon=":material/event_available:",)
 
-project_2=st.Page("views/Parcel.py",
+project_2=st.Page("jd1/Parcel.py",
                         title="Parcel",
                         icon=":material/package:",)
 
@@ -34,10 +34,10 @@ def contact_form():
             st.success("Message successfully sent!")
 
 st.title("Businfoo! :trolleybus:")
-col1,col2=st.columns(2,gap="small")
-with col1:
-    st.image("./asets/jd.1.jpeg",width=230)
-with col2:
+#col1,col2=st.columns(2,gap="small")
+#with col1:
+#    st.image("./asets/jd.1.jpeg",width=230)
+with st.container():
     st.title("BOOK YOUR TICKETS NOW HURRY!!:runner:")
     st.link_button("Book now","https://forms.gle/mVnYjupNxDw9qB4r7")
     #if st.button("Book now"):
@@ -88,10 +88,10 @@ st.title("Parcel :package: ")
 
 with st.container():
     st.write("We are providing parcel facility which makes easier to send the parcels")
-colo1,colo2=st.columns(2,gap="small")
-with colo1:
-    st.image("./asets/jd.2.jpeg",width=230)
-with colo2:
+#colo1,colo2=st.columns(2,gap="small")
+#with colo1:
+#    st.image("./asets/jd.2.jpeg",width=230)
+with st.container():
     st.title("Send the Parcel :incoming_envelope:")
     st.write("just click the button to send the parcel and fill the details complete the payment process to get notification about the parcel tracking")
     st.link_button("send parcel","https://forms.gle/pec69CtXypbGfe6K6")
